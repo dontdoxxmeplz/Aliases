@@ -1,8 +1,38 @@
+# Unix
+alias e="$EDITOR"
+alias v="$VISUAL"
+
+# ls specifics
+alias ls='exa -a'
+alias ll="ls -l"
+alias ln="ln -v"
+alias l='ls -l'
+alias la='ls'
+alias lla='ls -l'
+alias lt='ls --tree'
+alias ip='ip -c'
+alias rm='rm -i'
+
+# Dos 2 unix recursive
 alias d2u='find . -type f -print0 | xargs -0 dos2unix'
-alias r='ranger'
+
+# Open ranger terminal file manager
+alias r='ranger .'
+
+# Print all hostnames
 alias hostname='hostname -A'
+
+# Grant execution right to all .sh files inside the current directory recursively
 alias recexec='find . -type f -iname "*.sh" -exec chmod +x {} \;'
+
+# Open atom in the current directory
 alias a='atom .'
+
+# History grep text
 alias gh='history|grep'
+
+# Python3 shortcut
 alias p3='python3'
+
+# Cat a file and put the content in the clipboard
 alias caty='xclip -sel c <' # copy cotent of the file in clipboard, ex : caty input.txt
