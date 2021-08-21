@@ -1,2 +1,3 @@
 [[ ! -f ~/.shortcuts_aliases ]] || source ~/.shortcuts_aliases
-[[ ! -f ~/.kubectl_aliases ]] || source ~/.kubectl_aliases
+[[ ! -f ~/.docker_aliases ]] || source ~/.docker_aliases
+[[ ! -f ~/.kubernetes_rancher_aliases ]] || source ~/.kubernetes_rancher_aliases
