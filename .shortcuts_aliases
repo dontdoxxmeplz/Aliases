@@ -13,6 +13,9 @@ alias lt='ls --tree'
 alias ip='ip -c'
 alias rm='rm -i'
 
+# Create directory and subdirectory by default with mkdir command
+alias mkdir="mkdir -p"
+
 # Dos 2 unix recursive
 alias d2u='find . -type f -print0 | xargs -0 dos2unix'
 
