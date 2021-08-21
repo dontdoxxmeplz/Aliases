@@ -1,4 +1,4 @@
-alias ranconf='mv kube_config_cluster.yml kube_config.yml && export KUBECONFIG=$(pwd)/kube_config.yml'
+alias ranconf='export KUBECONFIG=$(pwd)/kube_config_cluster.yml && export KUBECONFIG=$(pwd)/kube_config.yml'
 
 alias kexp='export KUBECONFIG='
 alias k='kubectl'
