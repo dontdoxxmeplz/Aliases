@@ -3,7 +3,11 @@ alias e="$EDITOR"
 alias v="$VISUAL"
 
 # ls specifics
-alias ls='exa -a'
+if command -v exa &> /dev/null
+then
+    alias ls='exa -a'
+fi
+
 alias ll="ls -l"
 alias ln="ln -v"
 alias l='ls -l'
