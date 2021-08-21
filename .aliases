@@ -1,0 +1,2 @@
+[[ ! -f ~/.shortcuts_aliases ]] || source ~/.shortcuts_aliases
+[[ ! -f ~/.kubectl_aliases ]] || source ~/.kubectl_aliases
