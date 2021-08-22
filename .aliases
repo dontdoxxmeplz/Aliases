@@ -1,5 +1,5 @@
-[[ ! -f ~/.shortcuts_aliases ]] || source ~/.shortcuts_aliases
-[[ ! -f ~/.vagrant_aliases ]] || source ~/.vagrant_aliases
-[[ ! -f ~/.git_aliases ]] || source ~/.git_aliases
-[[ ! -f ~/.docker_aliases ]] || source ~/.docker_aliases
-[[ ! -f ~/.kubernetes_rancher_aliases ]] || source ~/.kubernetes_rancher_aliases
+[[ ! -f ~/.Aliases/shortcuts_aliases ]] || source ~/.Aliases/shortcuts_aliases
+[[ ! -f ~/.Aliases/vagrant_aliases ]] || source ~/.Aliases/vagrant_aliases
+[[ ! -f ~/.Aliases/git_aliases ]] || source ~/.Aliases/git_aliases
+[[ ! -f ~/.Aliases/docker_aliases ]] || source ~/.Aliases/docker_aliases
+[[ ! -f ~/.Aliases/kubernetes_rancher_aliases ]] || source ~/.Aliases/kubernetes_rancher_aliases
