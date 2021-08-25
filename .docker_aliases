@@ -1,2 +1,4 @@
 alias do='docker'
+alias dob='docker build'
+alias dor='docker run'
 alias dora='docker rmi -f $(docker images -a -q) && docker rm -vf $(docker ps -a -q) && docker system prune -f'
