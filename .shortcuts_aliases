@@ -17,6 +17,8 @@ alias lt='ls --tree'
 alias ip='ip -c'
 alias rm='rm -i'
 
+alias ra="rm -rf"
+
 # Create directory and subdirectory by default with mkdir command
 alias mkdir="mkdir -p"
 
