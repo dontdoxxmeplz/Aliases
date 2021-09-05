@@ -1,1 +1,1 @@
-alias dr='docker run -it '
+alias sec_autorecon='docker build -t autorecon https://github.com/Tib3rius/AutoRecon.git'
