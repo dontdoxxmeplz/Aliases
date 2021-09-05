@@ -1,1 +1,4 @@
+alias sec_recon='docker build -t recon https://github.com/dontdoxxmeplz/subdomainsEnumerator.git'
+
 alias sec_autorecon='docker build -t autorecon https://github.com/Tib3rius/AutoRecon.git'
+
