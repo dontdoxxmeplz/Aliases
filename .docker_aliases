@@ -1,3 +1,4 @@
+alias dr='docker run -it '
 alias dok='docker'
 alias dokb='docker build'
 alias dokr='docker run'
