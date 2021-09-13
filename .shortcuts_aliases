@@ -50,7 +50,7 @@ alias caty='xclip -sel c <' # copy cotent of the file in clipboard, ex : caty in
 rvmtool='sudo systemctl restart vmtoolsd.service'
 
 # Mullvad
-mullvad='openvpn --config'
-mulvad='openvpn --config'
-mulv='openvpn --config'
-muvad='openvpn --config'
+alias mullvad='openvpn --config'
+alias mulvad='openvpn --config'
+alias mulv='openvpn --config'
+alias muvad='openvpn --config'
