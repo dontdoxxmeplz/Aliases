@@ -57,3 +57,12 @@ alias mullvad='sudo openvpn --config'
 alias mulvad='sudo openvpn --config'
 alias mulv='sudo openvpn --config'
 alias muvad='sudo openvpn --config'
+
+# Knowledge-manager (kb-manager)
+alias kbl="kb list"
+alias kbe="kb edit"
+alias kba="kb add"
+alias kbv="kb view"
+alias kbd="kb delete --id"
+alias kbg="kb grep"
+alias kbt="kb list --tags"
