@@ -2,6 +2,9 @@
 alias e="$EDITOR"
 alias v="$VISUAL"
 
+alias vi='nvim'
+alias vim='nvim'
+
 # ls specifics
 if command -v exa &> /dev/null
 then
@@ -21,6 +24,9 @@ alias ra="rm -rf"
 
 # Create directory and subdirectory by default with mkdir command
 alias mkdir="mkdir -p"
+
+# Electerm
+alias el='nohup electerm &'
 
 # Dos 2 unix recursive
 alias d2u='find . -type f -print0 | xargs -0 dos2unix'
@@ -54,3 +60,12 @@ alias mullvad='sudo openvpn --config'
 alias mulvad='sudo openvpn --config'
 alias mulv='sudo openvpn --config'
 alias muvad='sudo openvpn --config'
+
+# Knowledge-manager
+alias kbl="kb list"
+alias kbe="kb edit"
+alias kba="kb add"
+alias kbv="kb view"
+alias kbd="kb delete --id"
+alias kbg="kb grep"
+alias kbt="kb list --tags"
