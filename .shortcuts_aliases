@@ -20,6 +20,7 @@ alias lt='ls --tree'
 alias ip='ip -c'
 alias rm='rm -i'
 
+# Remove
 alias ra="rm -rf"
 
 # Create directory and subdirectory by default with mkdir command
@@ -34,11 +35,14 @@ alias d2u='find . -type f -print0 | xargs -0 dos2unix'
 # Open ranger terminal file manager
 alias r='ranger .'
 
+# Electerm
+alias el='nohup electerm &'
+
 # Print all hostnames
 alias hostname='hostname -A'
 
 # Grant execution right to all .sh files inside the current directory recursively
-alias recexec='find . -type f -iname "*.sh" -exec chmod +x {} \;'
+alias rexec='find . -type f -iname "*.sh" -exec chmod +x {} \;'
 
 # Open atom in the current directory
 alias a='atom .'
@@ -61,7 +65,6 @@ alias mulvad='sudo openvpn --config'
 alias mulv='sudo openvpn --config'
 alias muvad='sudo openvpn --config'
 
-# Knowledge-manager
 alias kbl="kb list"
 alias kbe="kb edit"
 alias kba="kb add"
