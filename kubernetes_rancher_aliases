@@ -1,4 +1,5 @@
 alias kubeconfig='RES="" && for x in $(find ~/.kube -type f -name "*.yml"); do RES+="$x:" done && export KUBECONFIG=$(echo $RES | rev | cut -c 2- | rev)'
+alias kubeconf='ln -s $(pwd)/kube_config_cluster.yml ~/.kube/config --force'
 alias k='kubectl'
 alias kdel='kubectl delete'
 alias kdelp='kubectl delete pod'
