@@ -1,3 +1,4 @@
+alias kubeconfig='RES="" && for x in $(find ~/.kube -type f -name "*.yml"); do RES+="$x:" done && export KUBECONFIG=$(echo $RES | rev | cut -c 2- | rev)'
 alias k='kubectl'
 alias kx='kubectx'
 alias kkr='kubectl krew'
