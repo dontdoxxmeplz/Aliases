@@ -1,8 +1,0 @@
-alias dr='docker run -it '
-alias dok='docker'
-alias dokb='docker build'
-alias dokr='docker run'
-alias doklia='docker image ls --all'
-alias dormi='docker rmi -f $(docker images -a -q)'
-alias dormc='docker rm -vf $(docker ps -a -q)'
-alias dora='docker rm -vf $(docker ps -a -q) && docker rmi -f $(docker images -a -q) &&  docker system prune -f'

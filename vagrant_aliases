@@ -1,4 +1,0 @@
-alias va='vagrant'
-alias vadf='vagrant destroy -f'
-alias vau='vagrant up'
-alias vaup='vagrant up --provision'
