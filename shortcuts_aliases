@@ -80,3 +80,6 @@ alias kbv="kb view"
 alias kbd="kb delete --id"
 alias kbg="kb grep"
 alias kbt="kb list --tags"
+
+alias n="navi --fzf-overrides '--layout=reverse --border=rounded --margin 15% --padding 3% --header-lines=0'"
+alias nav="navi --fzf-overrides '--layout=reverse --border=rounded --margin 15% --padding 3% --header-lines=0'"
