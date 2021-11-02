@@ -5,20 +5,28 @@ alias v="$VISUAL"
 alias vi='nvim'
 alias vim='nvim'
 
+alias n="navi --fzf-overrides '--layout=reverse --border=rounded --margin 15% --padding 3%'"
+alias nav="navi --fzf-overrides '--layout=reverse --border=rounded --margin 15% --padding 3%'"
+
+alias kcrt='kubectl cert-manager'
+alias krmq='kubectl rabbitmq'
+
 # ls specifics
 if command -v exa &> /dev/null
 then
     alias ls='exa -a'
 fi
 
-alias ll="ls -l"
+alias ll="ls -l --color"
 alias ln="ln -v"
-alias l='ls -l'
-alias la='ls'
-alias lla='ls -l'
-alias lt='ls --tree'
+alias l='ls -l --color'
+alias la='ls --color'
+alias lla='ls -l --color'
+alias lt='ls --tree --color'
 alias ip='ip -c'
 alias rm='rm -i'
+
+alias des='cd ~/Desktop'
 
 # Remove
 alias ra="rm -rf"

@@ -3,3 +3,4 @@
 [[ ! -f ~/aliases/git_aliases ]] || source ~/aliases/git_aliases
 [[ ! -f ~/aliases/docker_aliases ]] || source ~/aliases/docker_aliases
 [[ ! -f ~/aliases/kubernetes_rancher_aliases ]] || source ~/aliases/kubernetes_rancher_aliases
+source ~/aliases/extract.sh
