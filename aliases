@@ -7,6 +7,7 @@ alias vim='nvim'
 
 alias n="navi --fzf-overrides '--layout=reverse --border=rounded --margin 15% --padding 3%'"
 alias nav="navi --fzf-overrides '--layout=reverse --border=rounded --margin 15% --padding 3%'"
+alias cheat="cd $HOME/.local/share/navi/cheats"
 
 alias kcrt='kubectl cert-manager'
 alias krmq='kubectl rabbitmq'
