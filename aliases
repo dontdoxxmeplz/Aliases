@@ -47,6 +47,9 @@ alias r='ranger .'
 # Electerm
 alias el='nohup electerm &'
 
+# Minikube
+alias minikuberestart="minikube delete && minikube start"
+
 # Print all hostnames
 alias hostname='hostname -A'
 
