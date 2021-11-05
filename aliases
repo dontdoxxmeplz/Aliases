@@ -5,8 +5,8 @@ alias v="$VISUAL"
 alias vi='nvim'
 alias vim='nvim'
 
-alias n="navi --fzf-overrides '--layout=reverse --with-nth 1,2 --border=rounded --margin 15% --padding 3%'"
-alias nav="navi --fzf-overrides '--layout=reverse --with-nth 1,2 --border=rounded --margin 15% --padding 3%'"
+alias n="navi --fzf-overrides '--layout=reverse --with-nth 1,2 --border=rounded --margin 7% --padding 3%'"
+alias nav="navi --fzf-overrides '--layout=reverse --with-nth 1,2 --border=rounded --margin 7% --padding 3%'"
 alias cheat="cd $HOME/.local/share/navi/cheats"
 
 alias kcrt='kubectl cert-manager'
