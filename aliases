@@ -59,6 +59,9 @@ alias a='atom .'
 # History grep text
 alias gh='history|grep'
 
+# peek recorder
+alias peek='peek --display=:$DISPLAY &'
+
 # Python3 shortcut
 alias p3='python3'
 
