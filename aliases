@@ -17,12 +17,13 @@ then
     alias ls='exa -a'
 fi
 
-alias ll="ls -l --color"
+alias ls="ls --color"
+alias ll="ls -l"
 alias ln="ln -v"
-alias l='ls -l --color'
-alias la='ls --color'
-alias lla='ls -l --color'
-alias lt='ls --tree --color'
+alias l='ls -l'
+alias la='ls'
+alias lla='ls -l'
+alias lt='ls --tree'
 alias ip='ip -c'
 alias rm='rm -i'
 
