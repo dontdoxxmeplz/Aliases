@@ -1,6 +1,6 @@
 # Unix
 
-source ~/.extract.sh
+if [ ! -f ~/aliases/functions.sh ]; then wget https://raw.githubusercontent.com/dontdoxxmeplz/aliases/main/functions.sh; else source ~/aliases/functions.sh; fi
 
 alias e="$EDITOR"
 alias v="$VISUAL"
