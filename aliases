@@ -116,6 +116,8 @@ alias kubeconfig='RES="" && for x in $(find ~/.kube -type f -name "*.yml"); do R
 alias kubeconf='ln -s $(pwd)/kube_config_cluster.yml ~/.kube/config --force'
 alias krmqiop='kubectl rabbitmq install-cluster-operator'
 alias kglh='kubectl get pod | grep longhorn-iscsi-installation'
+alias kgea='kubectl get events -A'
+alias kge='kubectl get events -n'
 alias kns='kubens'
 alias k='kubectl'
 alias kdel='kubectl delete'
