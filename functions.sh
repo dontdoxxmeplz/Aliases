@@ -1,9 +1,8 @@
 #!/bin/bash
-# function Extract for common file formats
 
+# function Extract for common file formats
 SAVEIFS=$IFS
 IFS="$(printf '\n\t')"
-
 function extract {
  if [ -z "$1" ]; then
     # display usage if no parameters given
@@ -44,5 +43,17 @@ function extract {
     done
 fi
 }
-
 IFS=$SAVEIFS
+
+# function extract {
+# if [ -z "$1" ]; then
+    # display usage if no parameters given
+#    echo "Usage: kwatch [namespace]"
+# else
+# kubectl get pods \
+#--namespace longhorn-system \
+#--watch
+# fi
+#}
+
+
