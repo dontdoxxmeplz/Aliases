@@ -32,7 +32,8 @@ alias ra="rm -rf"
 alias mkdir="mkdir -p"
 
 # navi
-if ! [ -x "$(command -v navi)" ]; then
+if command -v navi &> /dev/null
+then
 alias navi="navi --fzf-overrides '--layout=reverse --with-nth 1,2 --border=rounded --margin 5% --padding 3%'"
 alias n="navi"
 alias nav="navi"
@@ -65,7 +66,6 @@ alias gh='history|grep'
 # peek recorder
 if ! [ -x "$(command -v peek)" ]; then alias peek='peek --display=$DISPLAY &' fi
 
-
 # Python3 shortcut
 alias p3='python3'
 
@@ -78,12 +78,16 @@ alias vmr='sudo systemctl restart vmtoolsd.service'
 alias resvm='sudo systemctl restart vmtoolsd.service'
 
 # Mullvad
+if command -v openvpn &> /dev/null
+then
 alias mullvad='sudo openvpn --config'
 alias mulvad='sudo openvpn --config'
 alias mulv='sudo openvpn --config'
 alias muvad='sudo openvpn --config'
+fi
 
-if ! [ -x "$(command -v kb)" ]; then
+if command -v kb &> /dev/null
+then
 alias kbl="kb list"
 alias kbe="kb edit"
 alias kba="kb add"
@@ -94,7 +98,8 @@ alias kbt="kb list --tags"
 fi
 
 # Vagrant
-if ! [ -x "$(command -v vagrant)" ]; then
+if command -v vagrant &> /dev/null
+then
 alias va='vagrant'
 alias vadf='vagrant destroy -f'
 alias vau='vagrant up'
@@ -102,14 +107,16 @@ alias vaup='vagrant up --provision'
 fi
 
 # Git
-if ! [ -x "$(command -v git)" ]; then
+if command -v git &> /dev/null
+then
 alias cg='cd `git rev-parse --show-toplevel`'
 alias gst='git status'
 alias startgit='cd `git rev-parse --show-toplevel` && git checkout master && git pull'
 fi
 
 # Docker
-if ! [ -x "$(command -v docker)" ]; then
+if command -v docker &> /dev/null
+then
 alias dr='docker run -it '
 alias dok='docker'
 alias dokb='docker build'
@@ -121,7 +128,8 @@ alias dora='docker rm -vf $(docker ps -a -q) && docker rmi -f $(docker images -a
 fi
 
 # Kubernetes
-if ! [ -x "$(command -v kubectl)" ]; then
+if command -v kubectl &> /dev/null
+then
 alias kcrt='kubectl cert-manager'
 alias krmq='kubectl rabbitmq'
 alias kubeconfig='RES="" && for x in $(find ~/.kube -type f -name "*.yml"); do RES+="$x:" done && export KUBECONFIG=$(echo $RES | rev | cut -c 2- | rev)'
