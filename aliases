@@ -40,16 +40,16 @@ alias nav="navi"
 fi
 
 # kitty
-if ! [ -x "$(command -v navi)" ]; then alias icat="kitty +kitten icat" fi
+if ! [ -x "$(command -v navi)" ]; then alias icat="kitty +kitten icat"; fi
 
 # Dos2unix recursive
-if ! [ -x "$(command -v dos2unix)" ]; then alias d2u='find . -type f -print0 | xargs -0 dos2unix' fi
+if ! [ -x "$(command -v dos2unix)" ]; then alias d2u='find . -type f -print0 | xargs -0 dos2unix'; fi
 
 # Ranger
-if ! [ -x "$(command -v ranger)" ]; then alias r='ranger .' fi
+if ! [ -x "$(command -v ranger)" ]; then alias r='ranger .'; fi
 
 # Minikube
-if ! [ -x "$(command -v minikube)" ]; then alias minikuberestart="minikube delete && minikube start" fi
+if ! [ -x "$(command -v minikube)" ]; then alias minikuberestart="minikube delete && minikube start"; fi
 
 # Print all hostnames
 alias hostname='hostname -A'
@@ -58,13 +58,13 @@ alias hostname='hostname -A'
 alias rexec='find . -type f -iname "*.sh" -exec chmod +x {} \;'
 
 # Open atom in the current directory
-if ! [ -x "$(command -v atom)" ]; then alias a='atom .' fi
+if ! [ -x "$(command -v atom)" ]; then alias a='atom .'; fi
 
 # History grep text
 alias gh='history|grep'
 
 # peek recorder
-if ! [ -x "$(command -v peek)" ]; then alias peek='peek --display=$DISPLAY &' fi
+if ! [ -x "$(command -v peek)" ]; then alias peek='peek --display=$DISPLAY &'; fi
 
 # Python3 shortcut
 alias p3='python3'
@@ -954,5 +954,4 @@ alias kgwslowiden='kubectl get --watch --show-labels -o=wide --namespace'
 alias kgpowslowiden='kubectl get pods --watch --show-labels -o=wide --namespace'
 alias kgdepwslowiden='kubectl get deployment --watch --show-labels -o=wide --namespace'
 alias knot='kubectl node top'
-
 fi
