@@ -139,6 +139,7 @@ if command -v kubectl &> /dev/null
 then
 alias kcrt='kubectl cert-manager'
 alias kgresa='kubectl api-resources && kubectl api-versions'
+alias krmqmanage='kubectl rabbitmq -n rabbitmq-system manage'
 alias krmq='kubectl rabbitmq'
 alias kubeconfig='RES="" && for x in $(find ~/.kube -type f -name "*.yml"); do RES+="$x:" done && export KUBECONFIG=$(echo $RES | rev | cut -c 2- | rev)'
 alias kubeconf='kubeconfig'
