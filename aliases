@@ -143,7 +143,7 @@ alias kubeconfig='RES="" && for x in $(find ~/.kube -type f -name "*.yml"); do R
 alias kubeconf='ln -s $(pwd)/kube_config_cluster.yml ~/.kube/config --force'
 alias krmqiop='kubectl rabbitmq install-cluster-operator'
 alias kcrtiop='kcrt x install --namespace cert-manager'
-alias klhi='kubectl apply -f https://raw.githubusercontent.com/longhorn/longhorn/v1.2.2/deploy/longhorn.yaml'
+alias klhi='kubectl apply -f https://raw.githubusercontent.com/longhorn/longhorn/v1.2.2/deploy/longhorn.yaml && kubectl get pods --namespace longhorn-system --watch'
 alias klhtest='(curl -sSfL https://raw.githubusercontent.com/longhorn/longhorn/v1.2.2/scripts/environment_check.sh | bash)'
 alias kgs='kubectl get service'
 alias kgcia='kubectl get ClusterIssuer -A'
