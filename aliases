@@ -976,6 +976,8 @@ alias knot='kubectl node top'
 alias kdu='kubectl describe user'
 alias kdua='kubectl describe user -A'
 alias kgu='kubectl get user'
+alias kdvo='kubectl describe vhost'
+alias kdvoa='kubectl describe vhost -A'
 alias kgua='kubectl get user -A'
 if command -v zsh &> /dev/null
 then
