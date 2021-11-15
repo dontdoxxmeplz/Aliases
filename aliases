@@ -995,10 +995,10 @@ alias kgpvca='kubectl get pvc -A'
 alias kdpvc='kubectl describe pvc'
 alias kdpvca='kubectl describe pvc -A'
 alias kgua='kubectl get user -A'
-alias kgep='kubectl get endpoint'
-alias kgepa='kubectl get endpoint -A'
-alias kdep='kubectl describe endpoint'
-alias kdepa='kubectl describe endpoint -A'
+alias kgep='kubectl get endpoints'
+alias kgepa='kubectl get endpoints -A'
+alias kdep='kubectl describe endpoints'
+alias kdepa='kubectl describe endpoints -A'
 if command -v zsh &> /dev/null
 then
 source <(kubectl completion zsh)
