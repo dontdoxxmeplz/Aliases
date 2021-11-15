@@ -999,6 +999,11 @@ alias kgep='kubectl get endpoints'
 alias kgepa='kubectl get endpoints -A'
 alias kdep='kubectl describe endpoints'
 alias kdepa='kubectl describe endpoints -A'
+alias kgser='kubectl get service'
+alias kgsera='kubectl get service -A'
+alias kdser='kubectl describe service'
+alias kdsera='kubectl describe service -A'
+
 if command -v zsh &> /dev/null
 then
 source <(kubectl completion zsh)
