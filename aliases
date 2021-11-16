@@ -249,13 +249,22 @@ if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
   echo "       krmqdeploy rabbitmq-lab 1 longhorn"
 else
   if [ $(kubectl get ns -A | grep -E "$1" | wc -l) -eq 0 ]; then
-    echo Deploying rabbitmq cluster...
+    echo Deploying rabbitmq cluster..
     kubectl create namespace "$1" && krmq -n "$1" create "$1-instance" --replicas "$2" --service ClusterIP --storage-class "$3"
+    echo Installing the RabbitMQ Cluster, Waiting 30secs..
+    sleep 35
+    kubectl rabbitmq -n "$1" enable-all-feature-flags "$1-instance"
   fi
 fi
 }
 
 fi
+
+
+
+
+
+
 
 SAVEIFS=$IFS
 IFS="$(printf '\n\t')"
