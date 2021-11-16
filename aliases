@@ -151,7 +151,6 @@ alias kirnqtop='kubectl apply -f https://github.com/rabbitmq/messaging-topology-
 alias ktlh='(curl -sSfL https://raw.githubusercontent.com/longhorn/longhorn/v1.2.2/scripts/environment_check.sh | bash)'
 alias kgs='kubectl get service'
 alias kgsc='kubectl get storageclass'
-alias kgcia='kubectl get ClusterIssuer -A'
 alias krmqls='kubectl rabbitmq -A list'
 alias krmqla='kubectl rabbitmq -A list'
 alias kglh='kubectl get pod | grep longhorn-iscsi-installation'
@@ -242,6 +241,10 @@ alias kdser='kubectl describe service'
 alias kdsera='kubectl describe service -A'
 alias kgcm='kubectl get configmap'
 alias kdcma='kubectl describe configmap -A'
+alias kgcia='kubectl get ClusterIssuer -A'
+alias kgci='kubectl get ClusterIssuer'
+alias kdcia='kubectl describe ClusterIssuer -A'
+alias kdci='kubectl describe ClusterIssuer'
 
 function krmqdeploy {
 if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
