@@ -251,16 +251,16 @@ alias kgex='kubectl get exchange'
 alias kdexa='kubectl describe exchange -A'
 alias kdex='kubectl describe exchange'
 
-
-kubectl rabbitmq -n $RABBITNAMESPACE manage $RABBITNAMESPACE-instance
-
 function krmqmanage {
 if [ -z "$1" ]; then
   echo "Usage: krmqmanage [NAMESPACE]"
-  echo "       krmqmanage rabbitmq-lab"
+  echo "       krmqmanage rabbitmq-dev"
 else
-  if [ $(kubectl get ns -A | grep -E "$1" | wc -l) -eq 1 ]; then
+  if [ $(kubectl rabbitmq -A list | grep -E "$1-instance" | wc -l) -eq 1 ]; then
+    echo Start managing rabbitmq target instance..
     kubectl rabbitmq -n "$1" manage "$1-instance"
+  else
+    echo Instance $1-instance in the namespace $1
   fi
 fi
 }
