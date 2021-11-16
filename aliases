@@ -247,8 +247,6 @@ alias kgcia='kubectl get ClusterIssuer -A'
 alias kgci='kubectl get ClusterIssuer'
 alias kdcia='kubectl describe ClusterIssuer -A'
 alias kdci='kubectl describe ClusterIssuer'
-
-
 alias kgexa='kubectl get exchange -A'
 alias kgex='kubectl get exchange'
 alias kdexa='kubectl describe exchange -A'
