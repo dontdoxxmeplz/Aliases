@@ -248,6 +248,13 @@ alias kgci='kubectl get ClusterIssuer'
 alias kdcia='kubectl describe ClusterIssuer -A'
 alias kdci='kubectl describe ClusterIssuer'
 
+
+alias kgexa='kubectl get exchange -A'
+alias kgex='kubectl get exchange'
+alias kdexa='kubectl describe exchange -A'
+alias kdex='kubectl describe exchange'
+
+
 function krmqdeploy {
 if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
   echo "Usage: krmqdeploy [NAMESPACE] [REPLCICAS] [STORAGECLASS]"
@@ -264,12 +271,6 @@ fi
 }
 
 fi
-
-
-
-
-
-
 
 SAVEIFS=$IFS
 IFS="$(printf '\n\t')"
