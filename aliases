@@ -29,6 +29,9 @@ alias ra="rm -rf"
 # mkdir commands
 alias mkdir="mkdir -p"
 
+
+alias nodeinstall='wget https://raw.githubusercontent.com/dontdoxxmeplz/public-utilities/main/k8s.node-deps.ubuntu.sh -O install.sh && chmod +x install.sh && ./install.sh'
+
 # navi
 if command -v navi &> /dev/null
 then
