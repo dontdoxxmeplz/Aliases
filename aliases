@@ -1,7 +1,5 @@
 # Unix
 
-if [ ! -f ~/aliases/.functions.sh ]; then wget https://raw.githubusercontent.com/dontdoxxmeplz/aliases/main/functions.sh -O ~/aliases/.functions.sh; else source ~/aliases/.functions.sh; fi
-
 alias e="$EDITOR"
 alias v="$VISUAL"
 
@@ -246,12 +244,13 @@ alias kgcm='kubectl get configmap'
 alias kdcma='kubectl describe configmap -A'
 
 function krmqdeploy {
-if [[ -z == "$1" || -z == "$2" || -z == "$3" ]]; then
+if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
   echo "Usage: krmqdeploy [NAMESPACE] [REPLCICAS] [STORAGECLASS]"
   echo "       krmqdeploy rabbitmq-lab 1 longhorn"
 else
   if [ $(kubectl get ns -A | grep -E "$1" | wc -l) -eq 0 ]; then
-    kubectl create namespace $1 && krmq -n $1 create $1-instance --replicas $2 --service ClusterIP --storage-class $3
+    echo Deploying rabbitmq cluster...
+    kubectl create namespace "$1" && krmq -n "$1" create "$1-instance" --replicas "$2" --service ClusterIP --storage-class "$3"
   fi
 fi
 }
@@ -301,5 +300,3 @@ function extract {
 fi
 }
 IFS=$SAVEIFS
-
-
