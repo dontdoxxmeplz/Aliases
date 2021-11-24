@@ -83,12 +83,7 @@ alias caty='xclip -sel c <' # copy cotent of the file in clipboard, ex : caty in
 # Restart vmtool service
 
 
-alias vmwareenable='sudo systemctl enable vmware-vmblock-fuse --now; && sudo systemctl enable vmtoolsd --now; && sudo systemctl restart vmtoolsd.service;'
-alias enablevmware='sudo systemctl enable vmware-vmblock-fuse --now; && sudo systemctl enable vmtoolsd --now; && sudo systemctl restart vmtoolsd.service;'
-alias rvm='sudo systemctl enable vmware-vmblock-fuse --now; && sudo systemctl enable vmtoolsd --now; && sudo systemctl restart vmtoolsd.service;'
-alias vmr='sudo systemctl enable vmware-vmblock-fuse --now; && sudo systemctl enable vmtoolsd --now; && sudo systemctl restart vmtoolsd.service;'
-alias resvm='sudo systemctl enable vmware-vmblock-fuse --now; && sudo systemctl enable vmtoolsd --now; && sudo systemctl restart vmtoolsd.service;'
-alias vmwarerestart='sudo systemctl enable vmware-vmblock-fuse --now; && sudo systemctl enable vmtoolsd --now; && sudo systemctl restart vmtoolsd.service;'
+alias rvm='sudo systemctl restart vmtoolsd.service'
 
 # Mullvad
 if command -v openvpn &> /dev/null
