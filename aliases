@@ -135,9 +135,12 @@ alias dormc='docker rm -vf $(docker ps -a -q)'
 alias dora='docker rm -vf $(docker ps -a -q) && docker rmi -f $(docker images -a -q) &&  docker system prune -f'
 fi
 
+
 # Kubernetes
 if command -v kubectl &> /dev/null
 then
+
+if [ -x "$(command -v knsdel)" ]; then alias kdelfns='knsdel' && alias kdelnsf='knsdel' && alias kdelnsforce='knsdel'; fi
 alias kcrt='kubectl cert-manager'
 alias kgresa='kubectl api-resources && kubectl api-versions'
 alias krmq='kubectl rabbitmq'
