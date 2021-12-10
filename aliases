@@ -4,26 +4,30 @@ alias e="$EDITOR"
 alias v="$VISUAL"
 
 # browser shortcut
-alias repoalias='firefox --new-window https://github.com/dontdoxxmeplz/aliases/edit/main/aliases'
 alias repoaliases='firefox --new-window https://github.com/dontdoxxmeplz/aliases/edit/main/aliases'
+alias repoalias='firefox --new-window https://github.com/dontdoxxmeplz/aliases/edit/main/aliases'
 
-alias repokb='firefox --new-window https://github.com/dontdoxxmeplz/knowledge-base/edit/main/README.md'
-alias repoknowlbase='firefox --new-window https://github.com/dontdoxxmeplz/knowledge-base/edit/main/README.md'
 alias repoknownledgebase='firefox --new-window https://github.com/dontdoxxmeplz/knowledge-base/edit/main/README.md'
+alias repoknowlbase='firefox --new-window https://github.com/dontdoxxmeplz/knowledge-base/edit/main/README.md'
+alias repokb='firefox --new-window https://github.com/dontdoxxmeplz/knowledge-base/edit/main/README.md'
 
 alias repodevops='firefox --new-window https://github.com/dontdoxxmeplz/devops'
 alias repodeops='firefox --new-window https://github.com/dontdoxxmeplz/devops'
 alias repodev='firefox --new-window https://github.com/dontdoxxmeplz/devops'
 
+alias repodotfiles='firefox --new-window https://github.com/dontdoxxmeplz/dotfiles-collection'
 alias repodotcol='firefox --new-window https://github.com/dontdoxxmeplz/dotfiles-collection'
 alias repodots='firefox --new-window https://github.com/dontdoxxmeplz/dotfiles-collection'
-alias repodotfiles='firefox --new-window https://github.com/dontdoxxmeplz/dotfiles-collection'
 
 alias repoautomation='firefox --new-window https://github.com/dontdoxxmeplz/configer'
 alias repoansible='firefox --new-window https://github.com/dontdoxxmeplz/configer'
 alias repoconf='firefox --new-window https://github.com/dontdoxxmeplz/configer'
 alias repoconfiger='firefox --new-window https://github.com/dontdoxxmeplz/configer'
 alias repoconfer='firefox --new-window https://github.com/dontdoxxmeplz/configer'
+
+# i3
+alias i3config='vim ~/.config/i3/config'
+alias i3conf='vim ~/.config/i3/config'
 
 # ls specifics
 if command -v exa &> /dev/null
