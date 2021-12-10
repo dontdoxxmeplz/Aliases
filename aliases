@@ -30,6 +30,12 @@ alias i3config='vim ~/.config/i3/config'
 alias i3conf='vim ~/.config/i3/config'
 
 # ls specifics
+if command -v urserver-start &> /dev/null
+then
+    alias urs='urserver-start'
+fi
+
+# ls specifics
 if command -v exa &> /dev/null
 then
     alias ls='exa -a'
