@@ -11,6 +11,10 @@ alias repokb='firefox --new-window https://github.com/dontdoxxmeplz/knowledge-ba
 alias repoknowlbase='firefox --new-window https://github.com/dontdoxxmeplz/knowledge-base/edit/main/README.md'
 alias repoknownledgebase='firefox --new-window https://github.com/dontdoxxmeplz/knowledge-base/edit/main/README.md'
 
+alias repodevops='firefox --new-window https://github.com/dontdoxxmeplz/devops'
+alias repodeops='firefox --new-window https://github.com/dontdoxxmeplz/devops'
+alias repodev='firefox --new-window https://github.com/dontdoxxmeplz/devops'
+
 alias repodotcol='firefox --new-window https://github.com/dontdoxxmeplz/dotfiles-collection'
 alias repodots='firefox --new-window https://github.com/dontdoxxmeplz/dotfiles-collection'
 alias repodotfiles='firefox --new-window https://github.com/dontdoxxmeplz/dotfiles-collection'
