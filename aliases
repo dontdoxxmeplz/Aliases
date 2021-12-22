@@ -61,9 +61,6 @@ alias ra="rm -rf"
 # mkdir commands
 alias mkdir="mkdir -p"
 
-
-alias nodeinstall='wget https://raw.githubusercontent.com/dontdoxxmeplz/public-utilities/main/k8s.node-deps.ubuntu.sh -O install.sh && chmod +x install.sh && ./install.sh'
-
 # navi
 if command -v navi &> /dev/null
 then
@@ -167,6 +164,10 @@ alias dormc='docker rm -vf $(docker ps -a -q)'
 alias dora='docker rm -vf $(docker ps -a -q) && docker rmi -f $(docker images -a -q) &&  docker system prune -f'
 fi
 
+if command -v urxvt &> /dev/null
+then
+alias rxvt-unicode='urxvt'
+fi
 
 # Kubernetes
 if command -v kubectl &> /dev/null
