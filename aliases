@@ -48,6 +48,9 @@ alias rm='rm -i'
 # rm commands
 alias ra="rm -rf"
 
+# fonts
+alias listfont-'fc-lis'
+
 # mkdir commands
 alias mkdir="mkdir -p"
 
