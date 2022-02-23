@@ -167,7 +167,7 @@ then
 alias frcs='flux reconcile source git flux-system'
 alias fri='flux reconcile kustomization infrastructure'
 alias frf='flux reconcile kustomization flux-system'
-alias frall='flux reconcile source git flux-system && flux reconcile kustomization flux-system'
+alias frall='flux reconcile source git flux-system && flux reconcile kustomization flux-system infrastructure'
 fi
 
 # Kubernetes
