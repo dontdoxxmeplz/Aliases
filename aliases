@@ -162,6 +162,12 @@ then
 alias rxvt-unicode='urxvt'
 fi
 
+if command -v flux &> /dev/null
+then
+alias frcs='flux reconcile source git flux-system'
+alias frci='flux reconcile kustomization infrastructure'
+fi
+
 # Kubernetes
 if command -v kubectl &> /dev/null
 then
