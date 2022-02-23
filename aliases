@@ -165,7 +165,9 @@ fi
 if command -v flux &> /dev/null
 then
 alias frcs='flux reconcile source git flux-system'
-alias frci='flux reconcile kustomization infrastructure'
+alias fri='flux reconcile kustomization infrastructure'
+alias frf='flux reconcile kustomization flux-system'
+alias frall='flux reconcile source git flux-system && flux reconcile kustomization flux-system'
 fi
 
 # Kubernetes
