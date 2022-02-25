@@ -164,10 +164,9 @@ fi
 
 if command -v flux &> /dev/null
 then
-alias frcs='flux reconcile source git flux-system'
-alias fri='flux reconcile kustomization infrastructure'
-alias frf='flux reconcile kustomization flux-system'
-alias frall='flux reconcile source git flux-system && flux reconcile kustomization flux-system infrastructure'
+alias frall='flux reconcile source git flux-system && flux reconcile kustomization flux-system core && flux reconcile kustomization flux-system applications'
+alias fgall='flux get all'
+alias flog='flux logs'
 fi
 
 # Kubernetes
