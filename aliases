@@ -164,7 +164,7 @@ fi
 
 if command -v flux &> /dev/null
 then
-alias frall='flux reconcile source git flux-system && flux reconcile kustomization flux-system core && flux reconcile kustomization flux-system applications'
+alias frall='flux reconcile source git flux-system && flux reconcile kustomization flux-system applications core --with-source'
 alias fgall='flux get all'
 alias flog='flux logs'
 fi
@@ -174,20 +174,13 @@ if command -v kubectl &> /dev/null
 then
 
 if [ -x "$(command -v knsdel)" ]; then alias kdelfns='knsdel' && alias kdelnsf='knsdel' && alias kdelnsforce='knsdel'; fi
-alias kcrt='kubectl cert-manager'
-alias kgresa='kubectl api-resources && kubectl api-versions'
-alias kr='kubectl rabbitmq'
 alias kconf='export KUBECONFIG="$(pwd)/kube_config_cluster.yml"'
 alias kgsf='kubectl get statefulset'
 alias kgsec='kubectl get secret'
 alias kgseca='kubectl get secret -A'
-alias kicrtop='kcrt x install --namespace cert-manager'
-alias kilh='kubectl apply -f https://raw.githubusercontent.com/longhorn/longhorn/v1.2.2/deploy/longhorn.yaml && kubectl get pods --namespace longhorn-system --watch'
-alias ktlh='(curl -sSfL https://raw.githubusercontent.com/longhorn/longhorn/v1.2.2/scripts/environment_check.sh | bash)'
 alias kgs='kubectl get service'
 alias kgsc='kubectl get storageclass'
 alias krla='kubectl rabbitmq -A list'
-alias kglh='kubectl get pod | grep longhorn-iscsi-installation'
 alias kgea='kubectl get events -A'
 alias kgeall='kubectl get events -A'
 alias kge='kubectl get events'
@@ -196,6 +189,10 @@ alias kgpvca='kubectl get pvc -A'
 alias kns='kubens'
 alias kgsca='kubectl get storageclass -A'
 alias k='kubectl'
+alias kggr='kubectl get gitrepository -A'
+alias kghc='kubectl get helmcharts -A'
+alias kghrl='kubectl get helmrelease -A'
+alias kghr='kubectl get helmrepository -A'
 alias kdel='kubectl delete'
 alias kdelp='kubectl delete pod'
 alias kdelns='kubectl delete namespace'
@@ -296,37 +293,6 @@ alias kgexa='kubectl get exchange -A'
 alias kgex='kubectl get exchange'
 alias kdexa='kubectl describe exchange -A'
 alias kdex='kubectl describe exchange'
-
-function krmqmanage {
-if [ -z "$1" ]; then
-  echo "Usage: krmqmanage [NAMESPACE]"
-  echo "       krmqmanage rabbitmq-dev"
-else
-  if [ $(kubectl rabbitmq -A list | grep -E "$1-instance" | wc -l) -eq 1 ]; then
-    echo Start managing rabbitmq target instance..
-    kubectl rabbitmq -n "$1" manage "$1-instance"
-  else
-    echo Instance $1-instance in the namespace $1
-  fi
-fi
-}
-
-
-function krmqdeploy {
-if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
-  echo "Usage: krmqdeploy [NAMESPACE] [REPLCICAS] [STORAGECLASS]"
-  echo "       krmqdeploy rabbitmq-lab 1 longhorn"
-else
-  if [ $(kubectl get ns -A | grep -E "$1" | wc -l) -eq 0 ]; then
-    echo Deploying rabbitmq cluster..
-    kubectl create namespace "$1" && krmq -n "$1" create "$1-instance" --replicas "$2" --service ClusterIP --storage-class "$3"
-    echo Installing the RabbitMQ Cluster, Waiting 30secs..
-    sleep 35
-    kubectl rabbitmq -n "$1" enable-all-feature-flags "$1-instance"
-  fi
-fi
-}
-
 fi
 
 SAVEIFS=$IFS
