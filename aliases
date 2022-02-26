@@ -164,6 +164,9 @@ fi
 
 if command -v flux &> /dev/null
 then
+alias frh='flux reconcile helmrelease'
+alias frs='flux reconcile source'
+alias frk='flux reconcile kustomization'
 alias frall='flux reconcile source git flux-system && flux reconcile kustomization flux-system applications core --with-source'
 alias fgall='flux get all'
 alias flog='flux logs'
