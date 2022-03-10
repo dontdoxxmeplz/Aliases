@@ -141,7 +141,7 @@ if command -v git &> /dev/null
 then
 alias cg='cd `git rev-parse --show-toplevel`'
 alias gst='git status'
-alias startgit='cd `git rev-parse --show-toplevel` && git checkout master && git pull'
+alias gsr='cd `git rev-parse --show-toplevel` && git checkout master && git pull'
 fi
 
 # Docker
@@ -311,6 +311,16 @@ fi
 
 SAVEIFS=$IFS
 IFS="$(printf '\n\t')"
+
+function ggl {
+ if [ -z "$1" ]; then
+    # display usage if no parameters given
+    echo "Usage: ggl username/reponame"
+    exit 1
+ fi
+echo $(curl -L -s "https://api.github.com/repos/$1/releases/latest" | grep -Poe '"tag_name": "\K.*?(?=")' | head -n 1)
+}
+
 function extract {
  if [ -z "$1" ]; then
     # display usage if no parameters given
