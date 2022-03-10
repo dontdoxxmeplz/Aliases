@@ -316,9 +316,9 @@ function ggl {
  if [ -z "$1" ]; then
     # display usage if no parameters given
     echo "Usage: ggl username/reponame"
-    exit 1
+ else
+ echo $(curl -L -s "https://api.github.com/repos/$1/releases/latest" | grep -Poe '"tag_name": "\K.*?(?=")' | head -n 1)
  fi
-echo $(curl -L -s "https://api.github.com/repos/$1/releases/latest" | grep -Poe '"tag_name": "\K.*?(?=")' | head -n 1)
 }
 
 function extract {
