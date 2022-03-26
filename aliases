@@ -15,8 +15,9 @@ then
     alias ls='exa -a'
 fi
 
-# cd commands
+# shortcuts
 alias des='cd ~/Desktop'
+alias destmp="export TMPDIR=$(mktemp -d --tmpdir=~/Desktop) && cd $TMPDIR"
 
 # ls commands
 alias ls="ls --color"
