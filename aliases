@@ -17,7 +17,7 @@ fi
 
 # shortcuts
 alias des='cd ~/Desktop'
-alias destmp="export TMPDIR=$(mktemp -d ~/tmp.XXXX) && cd $TMPDIR"
+alias ctmp='cd $(mktemp -d)'
 
 # ls commands
 alias ls="ls --color"
